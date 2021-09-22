@@ -1,0 +1,57 @@
+/******************************************************************************
+21/9/21 ***happy primavera***
+leonel godoy
+
+2) El mC)todo mC!s fC!cil para encriptar un mensaje consiste en el de
+desplazamiento, donde cada carC!cter se desplaza una cantidad fija llamada clave.
+Por ejemplo si desplazamos una posiciC3n, la palabra HOLA serC-a IPMB. Realizar un
+programa (pueden ser 2, uno para encriptar y otro para desencriptar) que dado
+un texto lo encripte por desplazamiento y lo desencripte, utilizar la clave
+para indicar cuC!ntas posiciones se debe desplazar. Opcionalmente, pueden hacer
+el encriptado mC!s complejo. Una pista, la funciC3n ord() convierte una letra en un
+nC:mero entero y la funciC3n chr() convierte un nC:mero entero en carC!cter.
+
+definir clave
+*******************************************************************************/
+using System;
+
+class miPrigrama
+{
+  static void Main ()
+  {
+    string mensaje;
+    int clave;
+    int largoMensaje;
+    string mensajeCifrado = "";
+    char letraAuxiliar;
+    int numeroAuxiliar;
+    
+    //hardcodeo
+   /* mensaje="Hola";
+    clave=1;*/
+    
+    //ingreso por teclado
+    Console.WriteLine ("mensaje: ");
+    mensaje = Console.ReadLine ();
+    Console.WriteLine ("clave:");
+    clave = Convert.ToInt32 (Console.ReadLine ());
+    Console.WriteLine ("mensaje:" + mensaje +" clave:" + clave+"\n");
+    largoMensaje = mensaje.Length;
+   
+    //recorro la cadena letra por letra con un for()
+    //a cada carActer lo voy a convertir a Int32 
+    //y le voy a sumar la clave ingresada por el usuario
+    //ese resultado lo guardare en letraAuxiliar, haciendo un casting a char
+    //la cual serA concatenada al final de mensajeCifrado
+    for (int i = 0; i < largoMensaje; i++)
+      {
+	numeroAuxiliar = (Convert.ToInt32 (mensaje[i]) + clave);
+	letraAuxiliar = (char) numeroAuxiliar;
+	mensajeCifrado = string.Concat (mensajeCifrado, letraAuxiliar);
+      }
+
+    Console.WriteLine ("mensajeCifrado: " + mensajeCifrado);
+
+  }
+}
+

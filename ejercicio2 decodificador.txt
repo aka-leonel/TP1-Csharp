@@ -1,0 +1,52 @@
+/******************************************************************************
+21/9/21 ***happy primavera***
+leonel godoy
+
+TP Programacion, Ejercicio 2, segunda parte: Decodificador
+Recibe un mensaje cifrado y una clave de desplazamiento.
+Recorre el mensaje letra por letra y le resta la clave ingresada.
+Muestra el mensaje final.
+
+*******************************************************************************/
+using System;
+
+class miPrigrama
+{
+  static void Main ()
+  {
+    string input;
+    int clave;
+    int largoInput;
+    string output = "";
+    char letraAuxiliar;
+    int numeroAuxiliar;
+    
+    
+    /* ejemplo de mensaje cifrado
+    input='jqnc';
+    clave=2;*/
+    Console.WriteLine ("input: ");
+    input = Console.ReadLine ();
+    Console.WriteLine ("clave:");
+    clave = Convert.ToInt32 (Console.ReadLine ());
+    Console.WriteLine ("input:" + input +" clave:" + clave+"\n");
+    
+    
+    
+   largoInput = input.Length;
+   
+    //recorro la cadena letra por letra con un for() a cada carActer lo voy a convertir a Int32 
+    //y le voy a restar la clave ingresada por el usuario ese resultado lo guardare en letraAuxiliar, haciendo un casting a char
+    //la cual serA concatenada al final de output
+    for (int i = 0; i < largoInput; i++)
+      {
+	numeroAuxiliar = (Convert.ToInt32 (input[i]) - clave);
+	letraAuxiliar = (char) numeroAuxiliar;
+	output = string.Concat (output, letraAuxiliar);
+      }
+
+    Console.WriteLine ("output: " + output);
+
+  }
+}
+

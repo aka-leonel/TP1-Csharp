@@ -1,0 +1,71 @@
+/******************************************************************************
+22-9-2021
+leonel godoy, TP programacion
+
+4) Nuestro “Pintor” ahora se dedica a empapelados. Hay que realizar un programa
+para calcular la cantidad de rollos que necesita para una habitación. Tengan en
+cuenta que, la habitación es rectangular y la altura es pareja en toda ella, un rollo
+tiene 52cm de ancho y 10 m de largo y al empapelar las tiras se colocan
+verticalmente y deben ser enteras en toda la pared (si lo que sobra en el rollo es
+menos que la altura de la habitación, se debe desechar), se puede hacer que una
+tira cubra una esquina (la tira se comparte por 2 paredes).
+
+
+********Funcionamiento:
+El programa pedira que se ingresen la altura y el ancho de la pared,
+asI como también el numero de paredes a empapelar.
+Opcional: podEs comentar el ingreso por teclado y usar las 
+variables hardcodeadas.
+
+Limitación: el programa supone que todas las paredes son de la misma medida.
+Por lo que pide altura y ancho una unica vez y lo multiplica por el numeroDeParedes.
+*******************************************************************************/
+using System;
+
+class MiPrograma {
+  static void Main() {
+      
+    //medidas del rollo de papel
+    double largoRolloEnM = 10;
+    double anchoRolloEnM = 0.52;
+    double largoRolloEnCm = largoRolloEnM*100;
+    double anchoRolloEnCm = anchoRolloEnM*100;
+    
+    //Hardcodeo cuatro paredes iguales de 3X4 metros
+    /*double altoParedEnCm = 3 * 100;
+    double anchoParedEnCm = 4 * 100;
+    int numeroDeParedes = 4;*/
+   
+   //ingreso por teclado
+    Console.WriteLine("Altura pared en metros:");
+    double altoParedEnCm = Convert.ToDouble(Console.ReadLine()) *100;
+    
+    Console.WriteLine("Ancho pared en metros:");
+    double anchoParedEnCm = Convert.ToDouble(Console.ReadLine()) *100;
+    
+    Console.WriteLine("Cuantas paredes son?:");
+    int numeroDeParedes = Convert.ToInt32(Console.ReadLine());
+    
+    //como voy a empapelar verticalmente
+    //necesito saber el ancho total a empapelar
+    double anchoTotalEnCm = (anchoParedEnCm * numeroDeParedes);
+    
+    double metrosDePapel = 0;
+    double paredSinEmpapelar = anchoTotalEnCm;
+    double rollosNecesarios;
+   // int i=0;paredSinEmpapelar>0
+   
+    while(paredSinEmpapelar>0){
+        metrosDePapel = metrosDePapel + altoParedEnCm/100;
+        paredSinEmpapelar -= anchoRolloEnCm;
+        Console.WriteLine("Empapelando...");
+        
+    }
+    
+    //Console.WriteLine("Necesitara " + metrosDePapel + " metros de papel");
+    rollosNecesarios = metrosDePapel/10;
+    Console.WriteLine("Seran necesarios " + rollosNecesarios + " rollos para empapelar las paredes");
+    
+    
+  }
+}
