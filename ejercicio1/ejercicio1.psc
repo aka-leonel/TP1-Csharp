@@ -1,3 +1,5 @@
+// Realizado por leonel godoy, 20-9-2021
+
 Funcion superficienEnCm <- calcularSuperficienEnCm (ladoA,ladoB,ladoC)
 	Definir superficienEnCm Como Real
 	superficienEnCm <- 2*ladoA*ladoB+2*ladoA*ladoC+2*ladoB*ladoC
@@ -18,7 +20,7 @@ Funcion pedirMedidas (ladoA Por Referencia,ladoB Por Referencia,ladoC Por Refere
 FinFuncion
 
 Algoritmo ejercicio1
-	// leonel godoy, 20-9-2021
+	
 	// 1) Realizar un programa que, dadas las 3 dimensiones en centímetros de una caja,
 	// imprima en pantalla el volumen total en litros, y la superficie total de la caja.
 	// Entrada: las 3 dimensiones en centímetros. Salida: el volumen (en litros) y la superficie total (en cm2

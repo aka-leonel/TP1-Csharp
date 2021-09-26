@@ -1,6 +1,6 @@
 /******************************************************************************
 21/9/21 ***happy primavera***
-leonel godoy
+Alumno leonel godoy
 
 2) El mC)todo mC!s fC!cil para encriptar un mensaje consiste en el de
 desplazamiento, donde cada carC!cter se desplaza una cantidad fija llamada clave.

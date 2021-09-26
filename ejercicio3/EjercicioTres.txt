@@ -1,4 +1,5 @@
 ﻿//Ejercicio 3:
+//realizado por Micaela
 Realizar un programa para calcular la edad si hubieran vivido toda su vida en
 Marte (en años marcianos). Sabiendo que un año en la tierra dura 365 días, y el
 año marciano dura 687 días, calcular la edad, si hubiera nacido en Marte y vivido

@@ -1,6 +1,6 @@
 /******************************************************************************
 21/9/21 ***happy primavera***
-leonel godoy
+Alumno leonel godoy
 
 TP Programacion, Ejercicio 2, segunda parte: Decodificador
 Recibe un mensaje cifrado y una clave de desplazamiento.
